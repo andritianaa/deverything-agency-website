@@ -27,16 +27,16 @@ export function FaqSection() {
           <Accordion
             type="single"
             collapsible
-            className="w-full max-w-2xl"
+            className="w-full max-w-3xl"
             defaultValue="item-1"
           >
-            {faqs.map((faq) => (
-              <AccordionItem value="item-1" key={faq.question}>
+            {faqs.map((faq, i) => (
+              <AccordionItem value={`item-${i}`} key={faq.question}>
                 <AccordionTrigger>
-                  <p className="text-lg">{faq.question}</p>
+                  <p className="text-xl">{faq.question}</p>
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance">
-                  <p>{faq.answer}</p>
+                  <p className="text-base text-white/80">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
