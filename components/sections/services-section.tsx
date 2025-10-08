@@ -1,116 +1,101 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function ServicesSection() {
-  const services = [
-    {
-      title: "Brand\nStrategy",
-      icon: "brand.svg",
-      bgColor: "bg-[#ba81ee]/10",
-      textColor: "text-[#ba81ee]",
-    },
-    {
-      title: "Digital\nMarketing",
-      icon: "digitalmarketing.svg",
-      bgColor: "bg-[#70b5ff]/10",
-      textColor: "text-[#70b5ff]",
-    },
-    {
-      title: "UI/UX\nDesign",
-      icon: "uiux.svg",
-      bgColor: "bg-[#ffaf68]/10",
-      textColor: "text-[#ffaf68]",
-    },
-    {
-      title: "Analytics &\nReporting",
-      icon: "analitics.svg",
-      bgColor: "bg-[#79d45e]/10",
-      textColor: "text-[#79d45e]",
-    },
-    {
-      title: "Web\nDevelopment",
-      icon: "webdevp.svg",
-      bgColor: "bg-[#f4889a]/10",
-      textColor: "text-[#f4889a]",
-    },
-  ];
+import { Button } from "@/components/ui/button";
+import { WobbleCard } from "@/components/ui/wobble-card";
 
+export function ServicesSection() {
   return (
     <section id="services">
       <div className="2xl:py-20 py-11">
         <div className="container">
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col justify-center items-center gap-10 lg:gap-16">
-              <div className="max-w-32 text-center">
-                <h2>
-                  Where innovation meets
-                  <span className="instrument-font italic font-normal dark:text-white/70">
-                    {" "}
-                    aesthetics
-                  </span>
-                </h2>
-              </div>
-              <div className="grid auto-rows-max grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-6 w-full">
-                {services.map((service, index) => (
-                  <div
-                    key={index}
-                    className={`${service.bgColor} flex flex-col p-8 rounded-2xl gap-6 lg:gap-9`}
-                  >
-                    <div>
-                      <Image
-                        alt="service icon"
-                        width={40}
-                        height={40}
-                        src={`https://Awake-agency-next-js.vercel.app/images/home/innovation/${service.icon}`}
-                      />
-                    </div>
-                    <div>
-                      <h5 className={service.textColor}>
-                        {service.title.split("\n").map((line, i) => (
-                          <span key={i}>
-                            {line}
-                            {i !== service.title.split("\n").length - 1 && (
-                              <br />
-                            )}
-                          </span>
-                        ))}
-                      </h5>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          <div className="flex flex-col justify-center gap-10 md:gap-20">
+            <div className="mx-auto  flex items-center text-center">
+              <h2>
+                Une proposition
+                <span className="instrument-font italic font-normal dark:text-white">
+                  {" "}
+                  tout-en-un et unique
+                </span>
+              </h2>
             </div>
-            <div className="flex flex-col gap-4 xl:flex xl:flex-row bg-black items-center justify-between dark:bg-white/5 py-8 px-7 sm:px-12 rounded-3xl w-full">
-              <h4 className="text-white text-center xl:text-left">
-                See Our Work in Action.
-                <br />
-                Start Your Creative Journey with Us!
-              </h4>
-              <div className="flex flex-col sm:flex-row gap-3 items-center">
-                <Link
-                  className="group gap-2 text-black font-medium bg-white rounded-full flex items-center lg:gap-4 py-2 pl-5 pr-2 border border-white dark:border-opacity-50 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
-                  href="/contact"
-                >
-                  <span className="group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out">
-                    Let's Collaborate
-                  </span>
-                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:-translate-x-36 transition-all duration-200 ease-in-out">
-                    <ArrowUpRight className="w-4 h-4 text-white" />
-                  </div>
-                </Link>
-                <Link
-                  className="group border border-white dark:border-white/50 text-white font-medium bg-black gap-2 rounded-full flex items-center justify-between lg:gap-4 py-2 pl-5 pr-2 hover:opacity-95 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
-                  href="/#work"
-                >
-                  <span className="group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out">
-                    View Portfolio
-                  </span>
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:-translate-x-[125px] transition-all duration-200 ease-in-out">
-                    <ArrowUpRight className="w-4 h-4 text-black" />
-                  </div>
-                </Link>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+              <WobbleCard
+                containerClassName="relative col-span-1 lg:col-span-2 h-full bg-[url('/gradient1.jpg')] bg-center bg-cover bg-no-repeat min-h-[500px] lg:min-h-[300px]"
+                className=""
+              >
+                <div className="absolute inset-0 bg-black/20 -z-10 rounded-2xl w-screen h-screen"></div>
+                <div className="max-w-lg">
+                  <h2 className="text-left text-balance text-sm font-medium uppercase tracking-[-0.015em] text-white">
+                    Design UX/UI et création de logo
+                  </h2>
+                  <h4 className="mt-4 text-left  text-neutral-200">
+                    Notre équipe s'occupe de créer un design qui comblera vos
+                    utilisateurs, réduisant le churn et augmentant votre nombre
+                    d'utilisateurs payants.
+                  </h4>
+                </div>
+              </WobbleCard>
+              <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[url('/gradient2.jpg')] bg-center bg-cover bg-no-repeat">
+                <div className="absolute inset-0 bg-black/20 -z-10 rounded-2xl w-screen h-screen"></div>
+
+                <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                  Développement mobile{" "}
+                  <span className="instrument-font italic">iOS et Android</span>
+                </h2>
+                <h5 className="mt-4 max-w-[26rem] text-left   text-neutral-200">
+                  Notre équipe s'occupe de créer des applications mobiles
+                  performantes et intuitives pour iOS et Android, garantissant
+                  une expérience utilisateur optimale.
+                </h5>
+              </WobbleCard>
+              <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[url('/gradient3.jpg')] bg-center bg-cover bg-no-repeat">
+                <div className="absolute inset-0 bg-black/20 -z-10 rounded-2xl w-screen h-screen"></div>
+
+                <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                  Refonte de votre site web
+                </h2>
+                <h5 className="mt-4 max-w-[26rem] text-left  text-neutral-200">
+                  Nous modernisons votre site pour en faire un outil rapide,
+                  esthétique et orienté conversion.
+                </h5>
+              </WobbleCard>
+              <WobbleCard
+                containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px] bg-[url('/gradient4.jpg')] bg-center bg-cover bg-no-repeat"
+                className=""
+              >
+                <div className="max-w-lg">
+                  <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                    Développement de site web ou de votre SaaS
+                  </h2>
+                  <h5 className="mt-4 text-left text-neutral-200">
+                    Nous avons une équipe des plus rapide quand il s'agit de
+                    développer des applications web ou de SaaS de très haute
+                    qualité.
+                  </h5>
+                </div>
+              </WobbleCard>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-col gap-4 xl:flex xl:flex-row bg-black items-center justify-between dark:bg-white/5 py-8 px-7 sm:px-12 rounded-3xl w-full">
+            <h4 className="text-white text-center xl:text-left ">
+              <span className=" instrument-font italic">
+                Découvrez nos réalisations.
+              </span>
+              <br />
+              Commencez votre parcours avec nous !
+            </h4>
+            <div className="flex flex-col sm:flex-row gap-3 items-center">
+              <Link href="calendly">
+                <Button>
+                  Travaillons ensemble
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+              <Link href="/#work">
+                <Button variant={"ghost"}>Nos projets</Button>
+              </Link>
             </div>
           </div>
         </div>

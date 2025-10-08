@@ -40,7 +40,7 @@ export function TestimonialsSection() {
                       Facts & numbers
                     </span>
                   </div>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1 text-black">
                     <h2 className="text-7xl font-medium ">91%</h2>
                     <h4>Clients recommend our design services."</h4>
                   </div>

@@ -5,6 +5,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { CursorFollower } from "@/components/ui/cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,13 +36,7 @@ export const metadata: Metadata = {
       "At Deverything, we help small startups tackle the world's biggest challenges with tailored solutions.",
     siteName: "Deverything Agency",
   },
-  twitter: {
-    card: "summaryAt Deverythingmage",
-    title: "Deverything Agency - Building Bold Brands with Thoughtful Design",
-    description:
-      "At Deverything, we help small startups tackle the world's biggest challenges with tailored solutions.",
-    creator: "@Deverythingagency",
-  },
+
   robots: {
     index: true,
     follow: true,
@@ -66,12 +61,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
+        <CursorFollower />
       </body>
     </html>
   );

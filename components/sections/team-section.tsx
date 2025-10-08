@@ -4,23 +4,23 @@ import Link from "next/link";
 export function TeamSection() {
   const teamMembers = [
     {
-      name: "Logan Dang",
-      role: "WordPress Developer",
+      name: "Manohisoa Nirina",
+      role: "Project Manager",
       image: "creative_img_1.png",
     },
     {
-      name: "Ana Belić",
-      role: "Social Media Specialist",
+      name: "Laeticia Wong",
+      role: "Mobile developper",
       image: "creative_img_2.png",
     },
     {
-      name: "Brian Hanley",
-      role: "Product Designer",
+      name: "Miandry Rakotoarivelo",
+      role: "Fullstack developper",
       image: "creative_img_3.png",
     },
     {
-      name: "Darko Stanković",
-      role: "UI Designer",
+      name: "Andritiana Steve",
+      role: "Fullstack developper",
       image: "creative_img_4.png",
     },
   ];
@@ -32,10 +32,10 @@ export function TeamSection() {
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
             <div className="max-w-32 text-center">
               <h2>
-                Meet the creative minds behind
-                <span className="instrument-font italic font-normal dark:text-white/70">
-                  {" "}
-                  our success
+                Notre équipe
+                <br />
+                <span className="instrument-font italic font-normal dark:text-white">
+                  notre succès
                 </span>
               </h2>
             </div>

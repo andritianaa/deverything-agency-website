@@ -1,5 +1,7 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export function CtaSection() {
   return (
@@ -22,16 +24,11 @@ export function CtaSection() {
                   in every interaction.
                 </p>
               </div>
-              <Link
-                className="group w-fit text-white font-medium bg-black rounded-full flex items-center gap-4 py-2 pl-5 pr-2 hover:bg-transparent border border-black"
-                href="/contact"
-              >
-                <span className="group-hover:translate-x-9 group-hover:text-black transform transition-transform duration-200 ease-in-out">
-                  Let's Collaborate
-                </span>
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:-translate-x-36 transition-all duration-200 ease-in-out group-hover:rotate-45">
-                  <ArrowUpRight className="w-4 h-4 text-black " />
-                </div>
+              <Link href="calendly">
+                <Button magnetic>
+                  Travaillons ensemble
+                  <ArrowRight className="w-4 h-4 text-black " />
+                </Button>
               </Link>
             </div>
           </div>

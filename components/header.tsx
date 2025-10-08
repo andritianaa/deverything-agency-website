@@ -1,7 +1,6 @@
 "use client";
 
-import { Menu, Moon, Sun, X } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,38 +9,32 @@ import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 z-50 w-full">
-      <div className="container p-3 ">
-        <nav className="flex items-center py-3 px-4 justify-between bg-background shadow rounded-full">
+    <header className="fixed top-0 z-50 w-full flex items-center justify-center ">
+      <div className="lg:w-fit p-3 w-full">
+        <nav className="flex items-center py-3 px-4 bg-background/70 backdrop-blur-sm border border-border shadow rounded-2xl gap-2 justify-between">
           <div className="flex items-center">
             <Link href="/">
-              <Image
-                alt="logo"
-                width={34}
-                height={34}
-                src="https://odoo.teratany.org/web/image/website/1/logo/Deverything?unique=4d1f992"
-              />
+              <Image alt="logo" width={34} height={34} src="/logo.png" />
             </Link>
           </div>
 
-          <div className="hidden lg:flex bg-black/5 dark:bg-white/5 rounded-3xl py-3 px-1">
+          <div className="hidden lg:flex  rounded-3xl py-3 px-1">
             <ul className="flex gap-0 2xl:gap-1.5">
               <li>
                 <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
+                  className="px-4 py-2 font-medium rounded-3xl hover:bg-foreground/5 transition-colors text-black/60 dark:text-white"
                   href="/#aboutus"
                 >
-                  About us
+                  À propos
                 </Link>
               </li>
               <li>
                 <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
+                  className="px-4 py-2 font-medium rounded-3xl hover:bg-foreground/5 transition-colors text-black/60 dark:text-white"
                   href="/#services"
                 >
                   Services
@@ -49,59 +42,40 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
+                  className="px-4 py-2 font-medium rounded-3xl hover:bg-foreground/5 transition-colors text-black/60 dark:text-white"
                   href="/#work"
                 >
-                  Work
+                  Réalisations
                 </Link>
               </li>
               <li>
                 <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
+                  className="px-4 py-2 font-medium rounded-3xl hover:bg-foreground/5 transition-colors text-black/60 dark:text-white"
                   href="/#team"
                 >
-                  Team
+                  Équipe
                 </Link>
               </li>
               <li>
                 <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
+                  className="px-4 py-2 font-medium rounded-3xl hover:bg-foreground/5 transition-colors text-black/60 dark:text-white"
                   href="/#pricing"
                 >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
-                  href="/#awards"
-                >
-                  Awards
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="px-4 py-2 font-medium hover:text-black dark:hover:text-black hover:bg-white hover:rounded-3xl hover:shadow-header_shadow text-black/60 dark:text-white"
-                  href="/contact"
-                >
-                  Contact
+                  Tarifs
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="flex items-center gap-1 xl:gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="group flex h-8 w-8 items-center justify-center duration-300"
-            >
-              <span className="transition-transform duration-700">
-                <Sun className="h-6 w-6 rotate-0 block transition-all dark:-rotate-90 dark:hidden" />
-                <Moon className="h-6 w-6 rotate-90 hidden transition-all dark:rotate-0 dark:block" />
-              </span>
-            </Button>
+            <Link href={"/rdv"}>
+              <Button
+                magnetic
+                className="h-10 px-4 text-white whitespace-nowrap"
+              >
+                Prendre rendez-vous
+              </Button>
+            </Link>
 
             <div className="hidden max-lg:flex">
               <Button variant="ghost" size="icon" onClick={toggleMenu}>
@@ -131,7 +105,7 @@ export function Header() {
               href="/#aboutus"
               onClick={toggleMenu}
             >
-              <li className="rounded-md w-full p-2 px-4">About us</li>
+              <li className="rounded-md w-full p-2 px-4">À propos</li>
             </Link>
             <Link
               className="text-black hover:text-opacity-50 dark:text-white dark:hover:text-opacity-50 rounded-md text-base font-medium"
@@ -145,37 +119,31 @@ export function Header() {
               href="/#work"
               onClick={toggleMenu}
             >
-              <li className="rounded-md w-full p-2 px-4">Work</li>
+              <li className="rounded-md w-full p-2 px-4">Réalisations</li>
             </Link>
             <Link
               className="text-black hover:text-opacity-50 dark:text-white dark:hover:text-opacity-50 rounded-md text-base font-medium"
               href="/#team"
               onClick={toggleMenu}
             >
-              <li className="rounded-md w-full p-2 px-4">Team</li>
+              <li className="rounded-md w-full p-2 px-4">Équipe</li>
             </Link>
             <Link
               className="text-black hover:text-opacity-50 dark:text-white dark:hover:text-opacity-50 rounded-md text-base font-medium"
               href="/#pricing"
               onClick={toggleMenu}
             >
-              <li className="rounded-md w-full p-2 px-4">Pricing</li>
-            </Link>
-            <Link
-              className="text-black hover:text-opacity-50 dark:text-white dark:hover:text-opacity-50 rounded-md text-base font-medium"
-              href="/#awards"
-              onClick={toggleMenu}
-            >
-              <li className="rounded-md w-full p-2 px-4">Awards</li>
-            </Link>
-            <Link
-              className="text-black hover:text-opacity-50 dark:text-white dark:hover:text-opacity-50 rounded-md text-base font-medium"
-              href="/contact"
-              onClick={toggleMenu}
-            >
-              <li className="rounded-md w-full p-2 px-4">Contact</li>
+              <li className="rounded-md w-full p-2 px-4">Tarifs</li>
             </Link>
           </ul>
+
+          <div className="mt-6 px-4">
+            <Link href={"/rdv"} onClick={toggleMenu}>
+              <Button magnetic className="w-full text-white">
+                Prendre rendez-vous
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

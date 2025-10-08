@@ -8,8 +8,8 @@ export function AboutSection() {
           <div className="flex flex-col lg:gap-16 gap-5">
             <div className="flex flex-col items-center justify-center text-center gap-3">
               <h2 className="max-w-6xl">
-                Crafting exceptional, well experienced & technology driven
-                strategies to drive impactful results with
+                Des solutions stratégiques, expérimentées et orientées
+                résultats.
               </h2>
               <div>
                 <h2>
@@ -21,7 +21,7 @@ export function AboutSection() {
                       src="https://awake-agency-next-js.vercel.app/images/home/result/creativity.svg"
                     />
                     <span className="instrument-font italic font-normal">
-                      Creativity
+                      Créativité
                     </span>
                   </span>
                   <span className="inline-flex m-2 py-1 px-5 gap-3 rounded-full bg-[#70b5ff]/20 text-[#70b5ff] items-center">
@@ -43,7 +43,7 @@ export function AboutSection() {
                       src="https://awake-agency-next-js.vercel.app/images/home/result/strategy.svg"
                     />
                     <span className="instrument-font italic font-normal">
-                      Strategy
+                      Stratégie
                     </span>
                   </span>
                 </h2>
@@ -53,30 +53,30 @@ export function AboutSection() {
               <div className="relative 2xl:px-24 px-16 md:py-8 py-4">
                 <h2 className="2xl:text-9xl md:text-7xl text-5xl">
                   <sup>+</sup>
-                  <span>40</span>
+                  <span>20</span>
                 </h2>
                 <p className="mt-2 text-black/60 dark:text-white/60">
-                  Total Projects Completed
+                  Projets concrétisés
                 </p>
                 <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-28 w-px bg-black/10 dark:bg-white/10"></div>
               </div>
               <div className="relative 2xl:px-24 px-16 md:py-8 py-4">
                 <h2 className="2xl:text-9xl md:text-7xl text-5xl">
                   <sup>+</sup>
-                  <span>15</span>
+                  <span>3</span>
                 </h2>
                 <p className="mt-2 text-black/60 dark:text-white/60">
-                  Years of Experience
+                  années d'experience
                 </p>
                 <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-28 w-px bg-black/10 dark:bg-white/10"></div>
               </div>
               <div className="relative 2xl:px-24 px-16 md:py-8 py-4">
                 <h2 className="2xl:text-9xl md:text-7xl text-5xl">
-                  <sup>+</sup>
-                  <span>12</span>
+                  <sup></sup>
+                  <span>3</span>
                 </h2>
                 <p className="mt-2 text-black/60 dark:text-white/60">
-                  Design Awards
+                  Projets en cours
                 </p>
               </div>
             </div>

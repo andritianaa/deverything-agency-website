@@ -5,28 +5,16 @@ import Link from "next/link";
 export function WorkSection() {
   const projects = [
     {
-      title: "FlowBank",
-      image: "online_img_1.jpg",
-      tags: ["UX Research", "Interface Design"],
-      url: "https://www.framer.com/@wrap-pixel/",
+      title: "Pandorra.ai",
+      image: "pandorra.png",
+      tags: ["Intelligence artificielle", "Design", "Web"],
+      url: "https://pandorra.ai",
     },
     {
-      title: "Academy.co",
-      image: "online_img_2.jpg",
-      tags: ["Product Design", "Interaction Design"],
-      url: "https://www.framer.com/@wrap-pixel/",
-    },
-    {
-      title: "Genome",
-      image: "online_img_3.jpg",
-      tags: ["Brand identity design", "UX Research"],
-      url: "https://www.framer.com/@wrap-pixel/",
-    },
-    {
-      title: "Hotto",
-      image: "online_img_4.jpg",
-      tags: ["Visual Storytelling", "Web & Mobile Design"],
-      url: "https://www.framer.com/@wrap-pixel/",
+      title: "Teratany",
+      image: "teratany.png",
+      tags: ["Mobile", "Web"],
+      url: "https://network.teratany.org",
     },
   ];
 
@@ -37,10 +25,11 @@ export function WorkSection() {
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
             <div className="max-w-2xl text-center">
               <h2>
-                How we transformed a small business's
-                <span className="instrument-font italic font-normal dark:text-white/70">
+                Nos tout derniers
+                <br />
+                <span className="instrument-font italic font-normal dark:text-white">
                   {" "}
-                  online presence
+                  projets réalisés
                 </span>
               </h2>
             </div>
@@ -56,7 +45,7 @@ export function WorkSection() {
                       width={625}
                       height={410}
                       className="rounded-2xl"
-                      src={`https://awake-agency-next-js.vercel.app/images/home/onlinePresence/${project.image}`}
+                      src={project.image}
                     />
                     <Link
                       target="_blank"

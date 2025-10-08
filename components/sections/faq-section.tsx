@@ -65,13 +65,11 @@ export function FaqSection() {
                     value={`item-${index}`}
                     className="rounded-2xl data-[state=open]:bg-[#1B1D1E0D] dark:data-[state=open]:bg-white/5 p-6 border border-black/10 dark:border-white/50 group"
                   >
-                    black
                     <AccordionTrigger className="flex flex-1 items-center justify-between transition-all text-left [&[data-state=open]>svg]:rotate-45 group-hover:cursor-pointer">
                       <h4 className="text-black dark:text-white/80">
                         {faq.question}
                       </h4>
                     </AccordionTrigger>
-                    black
                     <AccordionContent className="pt-4">
                       <p className="text-black/60 dark:text-white/60">
                         {faq.answer}

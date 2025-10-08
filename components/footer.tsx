@@ -115,7 +115,7 @@ export function Footer() {
               <p className="font-medium">Sitemap</p>
               <ul className="flex flex-col gap-3">
                 <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/contact">Contact us</Link>
+                  <Link href="/calendly">Contact us</Link>
                 </li>
                 <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
                   <Link href="/#aboutus">About us</Link>
