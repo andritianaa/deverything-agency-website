@@ -3,167 +3,68 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="xl:pt-20 pb-6">
-      <div className="container">
-        <div className="flex flex-col xl:flex-row py-16 gap-10 justify-between border-b border-black/10 dark:border-white/10">
-          <div className="flex flex-col gap-6 max-w-md">
-            <Link href="/">
+    <footer className="border-t border-white/10 backdrop-blur-[5px] bg-black/90 dark:bg-black/90 w-full">
+      <div className="container py-12 md:py-16">
+        <div className="flex flex-col items-center justify-center">
+          {/* Navigation Links */}
+          <div className="flex-1 max-w-xs flex flex-col items-center justify-center">
+            <Link
+              href="/"
+              className=" flex text-blue-600 items-center justify-center text-2xl font-semibold gap-4"
+            >
               <Image
-                alt="logo"
-                width={117}
-                height={34}
-                className="dark:hidden"
-                src="https://awake-agency-next-js.vercel.app/images/logo/logo.svg"
+                src="/logo.png"
+                alt="Logo"
+                width={200}
+                height={40}
+                className="h-8 md:h-10 w-auto"
               />
-              <Image
-                alt="logo"
-                width={160}
-                height={50}
-                className="dark:block hidden"
-                src="https://awake-agency-next-js.vercel.app/images/logo/DarkModeLogo.svg"
-              />
+              Deverything
             </Link>
-            <p className="opacity-60">
-              Empowering businesses with innovative solutions. Let's create
-              something amazing together.
-            </p>
-            <div className="flex gap-4">
+
+            <nav className="flex flex-col items-center justify-center mt-8 gap-4">
               <Link
-                target="_blank"
-                className="hover:opacity-60"
-                href="https://twitter.com"
+                href="/#aboutus"
+                className="text-neutral-400 hover:text-white transition-colors duration-200 tracking-tight text-center"
               >
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/twitter.svg"
-                />
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:block hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/twitter_dark.svg"
-                />
+                À propos
               </Link>
+
               <Link
-                target="_blank"
-                className="hover:opacity-60"
-                href="https://linkedin.com/in"
+                href="/#services"
+                className="text-neutral-400 hover:text-white transition-colors duration-200 tracking-tight text-center"
               >
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/linkedin.svg"
-                />
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:block hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/linkedin_dark.svg"
-                />
+                Services
               </Link>
+
               <Link
-                target="_blank"
-                className="hover:opacity-60"
-                href="https://dribbble.com"
+                href="/#work"
+                className="text-neutral-400 hover:text-white transition-colors duration-200 tracking-tight text-center"
               >
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/dribble.svg"
-                />
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:block hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/dribble_dark.svg"
-                />
+                Réalisations
               </Link>
+
               <Link
-                target="_blank"
-                className="hover:opacity-60"
-                href="https://instagram.com"
+                href="/#team"
+                className="text-neutral-400 hover:text-white transition-colors duration-200 tracking-tight text-center"
               >
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/instagram.svg"
-                />
-                <Image
-                  alt="social-icon"
-                  width={20}
-                  height={20}
-                  className="dark:block hidden"
-                  src="https://awake-agency-next-js.vercel.app/images/home/footerSocialIcon/instagram_dark.svg"
-                />
+                Équipe
               </Link>
-            </div>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div className="flex flex-col gap-4">
-              <p className="font-medium">Sitemap</p>
-              <ul className="flex flex-col gap-3">
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/calendly">Contact us</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/#aboutus">About us</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/#work">Work</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/#services">Services</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/#pricing">Pricing</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-4">
-              <p className="font-medium">Other Pages</p>
-              <ul className="flex flex-col gap-3">
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/terms-and-conditions">Terms & Conditions</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/privacy-policy">Privacy Policy</Link>
-                </li>
-                <li className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                  <Link href="/admin">Admin</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-4">
-              <p className="font-medium">Contact Details</p>
-              <p className="text-black/60 dark:text-white/60">
-                81 Rivington Street London EC2A 3AY
-              </p>
-              <p className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                <Link href="mailto:hello@Deverything.agency">
-                  hello@Deverything.agency
-                </Link>
-              </p>
-              <p className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-                <Link href="tel:0105 192 3556">0105 192 3556</Link>
-              </p>
-            </div>
+
+              <Link
+                href="/#pricing"
+                className="text-neutral-400 hover:text-white transition-colors duration-200 tracking-tight text-center"
+              >
+                Tarifs
+              </Link>
+            </nav>
           </div>
         </div>
-        <div className="flex justify-center mt-8">
-          <p className="text-black/60 dark:text-white/60">
-            ©2025 Deverything. All Rights Reserved
+
+        {/* Copyright */}
+        <div className="mt-6 pt-8 border-t border-white/10">
+          <p className="text-neutral-500 text-sm text-center ">
+            © {new Date().getFullYear()} Tous droits réservés.
           </p>
         </div>
       </div>

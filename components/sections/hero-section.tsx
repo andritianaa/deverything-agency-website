@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUp, ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { CustomerList } from "@/components/customer-list";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -27,58 +28,9 @@ export function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">
-              <div className="flex items-center gap-7">
-                <ul className="avatar flex flex-row items-center">
-                  <li className="-mr-2 z-1">
-                    <Image
-                      alt="Avatar"
-                      width={44}
-                      height={44}
-                      className="rounded-full border-2 border-white"
-                      src="https://Awake-agency-next-js.vercel.app/images/home/avatar_1.jpg"
-                    />
-                  </li>
-                  <li className="-mr-2 z-1">
-                    <Image
-                      alt="Avatar"
-                      width={44}
-                      height={44}
-                      className="rounded-full border-2 border-white"
-                      src="https://Awake-agency-next-js.vercel.app/images/home/avatar_2.jpg"
-                    />
-                  </li>
-                  <li className="-mr-2 z-1">
-                    <Image
-                      alt="Avatar"
-                      width={44}
-                      height={44}
-                      className="rounded-full border-2 border-white"
-                      src="https://Awake-agency-next-js.vercel.app/images/home/avatar_3.jpg"
-                    />
-                  </li>
-                  <li className="-mr-2 z-1">
-                    <Image
-                      alt="Avatar"
-                      width={44}
-                      height={44}
-                      className="rounded-full border-2 border-white"
-                      src="https://Awake-agency-next-js.vercel.app/images/home/avatar_4.jpg"
-                    />
-                  </li>
-                </ul>
-                <div className="gap-1 flex flex-col">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 fill-white text-white" />
-                    ))}
-                  </div>
-                  <p className="text-sm font-normal text-black/60 dark:text-white/60">
-                    Plus de 20 projets réalisés
-                  </p>
-                </div>
-              </div>
+              <CustomerList />
               <div className="flex flex-col items-center justify-center gap-2 w-full sm:flex-row">
-                <Link href="/calendly">
+                <Link href="https://calendly.com/deverything-agency/appel-de-decouvertecalendly">
                   <Button magnetic>
                     Réserver un appel <ArrowRight />
                   </Button>

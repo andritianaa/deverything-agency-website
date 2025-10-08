@@ -1,16 +1,14 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { HeroSection } from "@/components/sections/hero-section"
-import { BrandsSection } from "@/components/sections/brands-section"
-import { AboutSection } from "@/components/sections/about-section"
-import { ServicesSection } from "@/components/sections/services-section"
-import { WorkSection } from "@/components/sections/work-section"
-import { TeamSection } from "@/components/sections/team-section"
-import { TestimonialsSection } from "@/components/sections/testimonials-section"
-import { PricingSection } from "@/components/sections/pricing-section"
-import { FaqSection } from "@/components/sections/faq-section"
-import { AwardsSection } from "@/components/sections/awards-section"
-import { CtaSection } from "@/components/sections/cta-section"
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { AboutSection } from "@/components/sections/about-section";
+import { BrandsSection } from "@/components/sections/brands-section";
+import { ComparisonCards } from "@/components/sections/comparison-section";
+import { CtaSection } from "@/components/sections/cta-section";
+import { FaqSection } from "@/components/sections/faq-section";
+import { HeroSection } from "@/components/sections/hero-section";
+import { ServicesSection } from "@/components/sections/services-section";
+import { TeamSection } from "@/components/sections/team-section";
+import { WorkSection } from "@/components/sections/work-section";
 
 export default function HomePage() {
   return (
@@ -23,13 +21,11 @@ export default function HomePage() {
         <ServicesSection />
         <WorkSection />
         <TeamSection />
-        <TestimonialsSection />
-        <PricingSection />
-        <FaqSection />
-        <AwardsSection />
+        <ComparisonCards />
         <CtaSection />
+        <FaqSection />
       </main>
       <Footer />
     </>
-  )
+  );
 }

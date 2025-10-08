@@ -1,5 +1,8 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export function TeamSection() {
   const teamMembers = [
@@ -30,14 +33,21 @@ export function TeamSection() {
       <div className="2xl:py-20 py-11">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
-            <div className="max-w-32 text-center">
+            <div className="text-center flex flex-col gap-6">
               <h2>
-                Notre équipe
-                <br />
+                Notre équipe,{" "}
                 <span className="instrument-font italic font-normal dark:text-white">
                   notre succès
                 </span>
               </h2>
+              <p className="my-4 text-white/80">
+                Une petite équipe qui fait des miracles.
+              </p>
+              <Link href="https://calendly.com/deverything-agency/appel-de-decouverte">
+                <Button magnetic>
+                  Prendre rendez-vous avec nous <ArrowRight />
+                </Button>
+              </Link>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
               {teamMembers.map((member, index) => (
